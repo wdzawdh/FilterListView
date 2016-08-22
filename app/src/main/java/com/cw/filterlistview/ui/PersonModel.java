@@ -29,8 +29,10 @@ public class PersonModel extends CompareModel {
         this.name = name;
         this.sex = sex;
         this.age = age;
-        //此处设置要按哪个字段排序
-        setCompareField(this.name);
     }
 
+    @Override
+    public String setCompareField() {
+        return name;//此处设置要按哪个字段排序
+    }
 }

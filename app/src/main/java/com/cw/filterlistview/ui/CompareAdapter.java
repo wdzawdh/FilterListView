@@ -46,7 +46,7 @@ public class CompareAdapter extends FilterBaseAdapter {
         } else {
             layout = (LinearLayout) convertView;
         }
-        ((TextView) layout.findViewById(R.id.textItem)).setText(mGroupsList.get(section).getValue().get(position).getCompareField());
+        ((TextView) layout.findViewById(R.id.textItem)).setText(getGroupsList().get(section).getValue().get(position).getCompareField());
         return layout;
     }
 
@@ -59,7 +59,7 @@ public class CompareAdapter extends FilterBaseAdapter {
         } else {
             layout = (LinearLayout) convertView;
         }
-        ((TextView) layout.findViewById(R.id.textItem)).setText(mGroupsList.get(section).getKey());
+        ((TextView) layout.findViewById(R.id.textItem)).setText(getGroupsList().get(section).getKey());
         return layout;
     }
 }

@@ -16,39 +16,29 @@ import android.support.annotation.NonNull;
 import com.cw.filterlistview.util.PinyinUtil;
 
 /**
+ * 当需要Model的显示需要按照某个字段排序时继承此类
+ * setCompareField方法来设置按哪个字段排序
+ *
  * @author Cw
  * @date 16/8/20
  */
-public class CompareModel implements Comparable<CompareModel> {
+public abstract class CompareModel implements Comparable<CompareModel> {
 
     private String compareField;
-    private String pinyin;
 
-
-    public CompareModel() {
-        super();
-
-    }
-
-    public void setCompareField(String compareField){
-        this.compareField = compareField;
-        this.pinyin = PinyinUtil.getPinyin(compareField);
-    }
+    public abstract String setCompareField();
 
     public String getCompareField() {
         return compareField;
     }
 
     public String getPinyin() {
-        return pinyin;
-    }
-
-    public void setPinyin(String pinyin) {
-        this.pinyin = pinyin;
+        this.compareField = setCompareField();
+        return PinyinUtil.getPinyin(compareField);
     }
 
     @Override
     public int compareTo(@NonNull CompareModel model) {
-        return pinyin.compareTo(model.pinyin);
+        return getPinyin().compareTo(model.getPinyin());
     }
 }

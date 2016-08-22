@@ -24,6 +24,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * ListView的导航条,需要和ListView绑定
+ * 可以自定义显示的内容,默认为 #A....Z
+ *
  * @author Cw
  * @date 16/8/19
  */
@@ -61,9 +64,12 @@ public class IndexBarView extends View {
         mPaint.setAntiAlias(true);
     }
 
+    /**
+     * 设置显示的内容,默认是A-Z
+     */
     public void setItems(List<String> list) {
         this.mItemsList = list;
-        invalidate();
+        requestLayout();
     }
 
 
@@ -80,7 +86,7 @@ public class IndexBarView extends View {
 
             if (i == mChooseIndex) {
                 mPaint.setColor(Color.parseColor("#1094FC"));
-                mPaint.setTextSize(dip2px(30));
+                mPaint.setTextSize(dip2px(28));
                 //字体放大时向左偏移100px
                 canvas.drawText(mItemsList.get(i), xPos - 150, yPos, mPaint);
             } else {

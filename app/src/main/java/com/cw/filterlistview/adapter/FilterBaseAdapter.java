@@ -32,7 +32,8 @@ public abstract class FilterBaseAdapter extends SectionedBaseAdapter implements 
 
     private IndexBarView mIndexBar;
     private List<? extends CompareModel> mList;
-    protected List<Map.Entry<String, List<? extends CompareModel>>> mGroupsList;
+    //此键值对集合的键为首字母(如"A"),值为所有以A开头的元素
+    private List<Map.Entry<String, List<? extends CompareModel>>> mGroupsList;
 
     public void updata(List<? extends CompareModel> list) {
         Collections.sort(list);
@@ -42,6 +43,10 @@ public abstract class FilterBaseAdapter extends SectionedBaseAdapter implements 
         notifyDataSetChanged();
         //取出分类后key的集合给indexBar
         mIndexBar.setItems(getKeyList(mGroupsList));
+    }
+
+    public List<Map.Entry<String, List<? extends CompareModel>>> getGroupsList() {
+        return mGroupsList;
     }
 
     public void bindIndexBar(IndexBarView indexBar) {
@@ -68,7 +73,7 @@ public abstract class FilterBaseAdapter extends SectionedBaseAdapter implements 
         // 从集合中查找第一个拼音首字母为letter的索引, 进行跳转
         for (int i = 0; i < mList.size(); i++) {
             CompareModel compareModel = mList.get(i);
-            String s = compareModel.getPinyin().charAt(0) + "";
+            String s = compareModel.getPinyin().toUpperCase().charAt(0) + "";
             if (TextUtils.equals(s, letter)) {
                 // 匹配成功, 中断循环, 跳转到i位置(需要计算头条目)
                 if (mListView != null) {
@@ -99,7 +104,7 @@ public abstract class FilterBaseAdapter extends SectionedBaseAdapter implements 
         TreeMap<String, List<? extends CompareModel>> tm = new TreeMap<>();
         for (int i = 0; i < list.size(); i++) {
             CompareModel m = list.get(i);
-            String key = m.getPinyin().charAt(0) + "";
+            String key = m.getPinyin().toUpperCase().charAt(0) + "";
             if (tm.containsKey(key)) {
                 ArrayList oldList = (ArrayList) tm.get(key);
                 oldList.add(m);
