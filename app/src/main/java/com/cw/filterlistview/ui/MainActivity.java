@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
-import com.cw.filterlistview.IndexBarView;
-import com.cw.filterlistview.PinnedHeaderListView;
+import com.cw.filterlistview.widget.IndexBarView;
+import com.cw.filterlistview.widget.PinnedHeaderListView;
 import com.cw.filterlistview.R;
 
 import java.util.ArrayList;

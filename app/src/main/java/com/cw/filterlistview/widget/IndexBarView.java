@@ -9,7 +9,7 @@
  *           modification:
  */
 
-package com.cw.filterlistview;
+package com.cw.filterlistview.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;

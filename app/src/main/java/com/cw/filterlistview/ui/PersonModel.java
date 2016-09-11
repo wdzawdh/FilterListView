@@ -12,7 +12,7 @@
 
 package com.cw.filterlistview.ui;
 
-import com.cw.filterlistview.model.CompareModel;
+import com.cw.filterlistview.widget.model.CompareModel;
 
 /**
  *

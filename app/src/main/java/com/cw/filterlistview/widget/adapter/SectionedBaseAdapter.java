@@ -1,4 +1,4 @@
-package com.cw.filterlistview.adapter;
+package com.cw.filterlistview.widget.adapter;
 
 import android.util.SparseArray;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
-import com.cw.filterlistview.PinnedHeaderListView;
+import com.cw.filterlistview.widget.PinnedHeaderListView;
 
 public abstract class SectionedBaseAdapter extends BaseAdapter implements PinnedHeaderListView.PinnedSectionedHeaderAdapter {
 

@@ -1,4 +1,4 @@
-package com.cw.filterlistview;
+package com.cw.filterlistview.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -12,7 +12,7 @@ import android.widget.HeaderViewListAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import com.cw.filterlistview.adapter.SectionedBaseAdapter;
+import com.cw.filterlistview.widget.adapter.SectionedBaseAdapter;
 
 public class PinnedHeaderListView extends ListView implements OnScrollListener {
 
@@ -104,7 +104,7 @@ public class PinnedHeaderListView extends ListView implements OnScrollListener {
                 float headerTop = header.getTop();
                 float pinnedHeaderHeight = mCurrentHeader.getMeasuredHeight();
                 header.setVisibility(VISIBLE);
-                if (pinnedHeaderHeight >= headerTop && headerTop > 0) {
+                if (pinnedHeaderHeight >= headerTop && headerTop >= 0) {
                     mHeaderOffset = headerTop - header.getHeight();
                 } else if (headerTop <= 0) {
                     header.setVisibility(INVISIBLE);

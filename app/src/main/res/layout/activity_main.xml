@@ -3,12 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.cw.filterlistview.PinnedHeaderListView
+    <com.cw.filterlistview.widget.PinnedHeaderListView
         android:id="@+id/pinnedHeaderListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.cw.filterlistview.IndexBarView
+    <com.cw.filterlistview.widget.IndexBarView
         android:id="@+id/indexBarView"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"

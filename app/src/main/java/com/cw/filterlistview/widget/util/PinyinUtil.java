@@ -1,4 +1,4 @@
-package com.cw.filterlistview.util;
+package com.cw.filterlistview.widget.util;
 
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;

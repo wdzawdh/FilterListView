@@ -9,11 +9,11 @@
  *           modification:
  */
 
-package com.cw.filterlistview.model;
+package com.cw.filterlistview.widget.model;
 
 import android.support.annotation.NonNull;
 
-import com.cw.filterlistview.util.PinyinUtil;
+import com.cw.filterlistview.widget.util.PinyinUtil;
 
 /**
  * 当需要Model的显示需要按照某个字段排序时继承此类

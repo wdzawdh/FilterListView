@@ -9,12 +9,12 @@
  *           modification:
  */
 
-package com.cw.filterlistview.adapter;
+package com.cw.filterlistview.widget.adapter;
 
 import android.text.TextUtils;
 
-import com.cw.filterlistview.IndexBarView;
-import com.cw.filterlistview.model.CompareModel;
+import com.cw.filterlistview.widget.IndexBarView;
+import com.cw.filterlistview.widget.model.CompareModel;
 
 import java.util.ArrayList;
 import java.util.Collections;
