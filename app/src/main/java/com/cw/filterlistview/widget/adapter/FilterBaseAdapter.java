@@ -18,9 +18,9 @@ import com.cw.filterlistview.widget.model.CompareModel;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 
 /**
  * 此adapter负责将数据按照Model指定的规则分类显示
@@ -100,8 +100,8 @@ public abstract class FilterBaseAdapter extends SectionedBaseAdapter implements 
      * 对集合以首字母进行分类
      */
     private List<Map.Entry<String, List<? extends CompareModel>>> groupsByFirstLetter(List<? extends CompareModel> list) {
-        //使用TreeMap保证排列顺序不变
-        TreeMap<String, List<? extends CompareModel>> tm = new TreeMap<>();
+        //使用TreeMap保证排列顺不变
+        LinkedHashMap<String, List<? extends CompareModel>> tm = new LinkedHashMap<>();
         for (int i = 0; i < list.size(); i++) {
             CompareModel m = list.get(i);
             String key = m.getPinyin().toUpperCase().charAt(0) + "";
