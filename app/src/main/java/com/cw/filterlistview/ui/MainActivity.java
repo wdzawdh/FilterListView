@@ -1,7 +1,6 @@
 package com.cw.filterlistview.ui;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
 import com.cw.filterlistview.widget.IndexBarView;
@@ -9,6 +8,8 @@ import com.cw.filterlistview.widget.PinnedHeaderListView;
 import com.cw.filterlistview.R;
 
 import java.util.ArrayList;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         //绑定indexBarView
         compareAdapter.bindIndexBar(indexBarView);
 
-        /**
+        /*
          * 此处模拟从网络获取的数据集合,model类需要继承CompareModel,重写setCompareField返回需要按哪个字段排序
          * 如果字段为中文会自动转换为拼音按照首字母排序
          */
@@ -52,6 +53,5 @@ public class MainActivity extends AppCompatActivity {
             list.add(male);
         }
         compareAdapter.updata(list);
-
     }
 }

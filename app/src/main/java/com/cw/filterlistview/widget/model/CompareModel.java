@@ -1,19 +1,9 @@
-/**
- *   @function:$
- *   @description: $
- *   @param:$
- *   @return:$
- *   @history:
- * 1.date:$ $
- *           author:$
- *           modification:
- */
-
 package com.cw.filterlistview.widget.model;
 
-import android.support.annotation.NonNull;
 
 import com.cw.filterlistview.widget.util.PinyinUtil;
+
+import androidx.annotation.NonNull;
 
 /**
  * 当需要Model的显示需要按照某个字段排序时继承此类

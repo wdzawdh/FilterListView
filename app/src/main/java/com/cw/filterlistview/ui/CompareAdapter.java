@@ -1,14 +1,3 @@
-/**
- *   @function:$
- *   @description: $
- *   @param:$
- *   @return:$
- *   @history:
- * 1.date:$ $
- *           author:$
- *           modification:
- */
-
 package com.cw.filterlistview.ui;
 
 import android.view.LayoutInflater;
